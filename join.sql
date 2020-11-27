@@ -22,7 +22,7 @@ SELECT  t2.customerNumber, t1.customerName, sum(amount) AS summation
 FROM customers t1
  LEFT JOIN
 payments t2 ON t2.customerNumber=t1.customerNumber
-WHERE t1.customerName like 'L%'
+WHERE t1.customerName LIKE 'L%'
 GROUP BY customerName
 HAVING summation >10000
 ORDER BY customerName;
