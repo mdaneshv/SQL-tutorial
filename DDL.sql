@@ -36,8 +36,9 @@ RENAME TABLE orders TO order_details;
 ALTER TABLE orders RENAME order_details;
 
 
--- Truncate: It deletes the table but preserves the structure of the table.
+-- Truncate: it deletes the table but preserves the structure of the table.
 TRUNCATE TABLE order_details;
 
--- drop: table is deleted with its full structure. Cannot be rollbacked
+-- Drop: table is deleted with its full structure. It cannot be rolled back.
 DROP TABLE order_details;
+
