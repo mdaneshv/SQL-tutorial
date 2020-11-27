@@ -41,8 +41,42 @@ ORDER BY summation;
 
 
 -- Nested selects
- SELECT * FROM employees e 
- WHERE EXISTS( SELECT *FROM titles t WHERE t.emp_no = e.emp_no AND title = 'Data Analyst');
+ SELECT 
+    *
+FROM
+    employees e
+WHERE
+    EXISTS( SELECT 
+            *
+        FROM
+            titles t
+        WHERE
+            t.emp_no = e.emp_no
+                AND title = 'Data Analyst');
  
- SELECT * FROM titles t WHERE emp_no IN (SELECT emp_no FROM employees) AND title='Data Analyst';
+ 
+ -- nested selects
+ SELECT 
+    *
+FROM
+    titles t
+WHERE
+    emp_no IN (SELECT 
+            emp_no
+        FROM
+            employees)
+        AND title = 'Data Analyst';
 
+
+-- nested selects
+SELECT 
+    *
+FROM
+    dept_manager
+WHERE
+    emp_no IN (SELECT 
+            emp_no
+        FROM
+            employees
+        WHERE
+            hire_date BETWEEN '1990-01-01' AND '1995-01-01');
