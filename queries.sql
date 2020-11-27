@@ -90,6 +90,6 @@ SELECT * FROM dup_orders;
 
 
 
-commit; -- Changes are saved and this transaction can not be undone.
+COMMIT; -- Changes are saved and this transaction can not be undone.
 UPDATE dup_orders SET orderDate='9999-01-01' WHERE orderNumber=10100;
 ROLLBACK; -- Changes back to the last commit.
