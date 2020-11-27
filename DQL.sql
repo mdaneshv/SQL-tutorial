@@ -55,7 +55,7 @@ WHERE
                 AND title = 'Data Analyst');
  
  
- -- nested selects
+ -- Nested selects
  SELECT 
     *
 FROM
@@ -68,7 +68,7 @@ WHERE
         AND title = 'Data Analyst';
 
 
--- nested selects
+-- Nested selects
 SELECT 
     *
 FROM
