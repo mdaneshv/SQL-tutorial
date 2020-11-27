@@ -18,13 +18,13 @@ INTO TABLE dup_orders
 FIELDS TERMINATED BY ',';  
   
 
--- Delete statement: it deletes existing records from the table based on the condition
+-- Delete statement: it deletes records from the table based on the condition
 DELETE FROM dup_orders 
 WHERE
     orderNumber = 100;
 
 
--- Update tablw
+-- Update table
 UPDATE dup_orders 
 SET 
     orderDate = '9999-01-01'
