@@ -28,3 +28,16 @@ DROP PRIMARY KEY;
 ALTER TABLE orders
 CHANGE customerName customerName char(128) NOT NULL;
 
+
+-- Rename 
+RENAME TABLE orders TO order_details;
+
+-- Equivalently we can rename the table in this way:
+ALTER TABLE orders RENAME order_details;
+
+
+-- Truncate: It deletes the table but preserves the structure of the table.
+TRUNCATE TABLE order_details;
+
+-- drop: table is deleted with its full structure. Cannot be rollbacked
+DROP TABLE order_details;
