@@ -39,3 +39,10 @@ GROUP BY customerNumber
 HAVING summation > 1000
 ORDER BY summation;
 
+
+-- Nested selects
+ SELECT * FROM employees e 
+ WHERE EXISTS( SELECT *FROM titles t WHERE t.emp_no = e.emp_no AND title = 'Data Analyst');
+ 
+ SELECT * FROM titles t WHERE emp_no IN (SELECT emp_no FROM employees) AND title='Data Analyst';
+
