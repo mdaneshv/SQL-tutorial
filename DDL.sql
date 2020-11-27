@@ -27,3 +27,4 @@ DROP PRIMARY KEY;
 
 ALTER TABLE orders
 CHANGE customerName customerName char(128) NOT NULL;
+
