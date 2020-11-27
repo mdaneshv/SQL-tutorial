@@ -1,26 +1,7 @@
 -- use database
 Use classicmodels;
-
-
-
-
--- Insert into the table from a csv file. Use FIRSTROW=2 to skip the column headers.
-LOAD DATA INFILE 'C:\customers.csv'
-INTO TABLE dup_orders
-FIELDS TERMINATED BY ',';
    
    
--- Insert into the table using select statement and another table
-INSERT INTO dup_orders
-  SELECT * FROM classicmodels.orders;
-  
-  
--- Or insert manually
-INSERT INTO dup_orders (orderNumber, orderDate)
-  VALUES (100, '3000-01-01'),
-  (300 ,'9000-01-01');
-  
-
 --  Select all data in a ascending order of ordernumbers
 SELECT 
     *
@@ -28,9 +9,6 @@ FROM
     dup_orders
 ORDER BY orderNumber ASC;
 
-
-
-    
 
 -- Extract all phone numbers starting with 508  
 SELECT 
