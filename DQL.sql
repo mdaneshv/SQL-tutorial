@@ -1,20 +1,7 @@
 -- use database
 Use classicmodels;
 
--- Create a table
-DROP TABLE IF EXISTS dup_orders;
 
-CREATE TABLE IF NOT EXISTS dup_orders (
-    `orderNumber` INT  NOT NULL,
-    `orderDate` DATE  NULL,
-    `requiredDate` DATE  NULL,
-    `shippedDate` DATE DEFAULT NULL,
-    `status` VARCHAR(15)  NULL,
-    `comments` TEXT,
-    `customerNumber` INT NOT NULL,
-     `customerName` VARCHAR(30) NOT NULL,
-     `customerLocation` VARCHAR(30) NULL
-);
 
 
 -- Insert into the table from a csv file. Use FIRSTROW=2 to skip the column headers.
@@ -42,11 +29,7 @@ FROM
 ORDER BY orderNumber ASC;
 
 
--- A different table named customer
-SELECT 
-    *
-FROM
-    customers;
+
     
 
 -- Extract all phone numbers starting with 508  
@@ -78,35 +61,3 @@ GROUP BY customerNumber
 HAVING summation > 1000
 ORDER BY summation;
 
-
-COMMIT; -- A transaction control language used to save the changes permanently.
-        -- Should be used specially before delete, insert or update statements
-
-DELETE FROM dup_orders 
-WHERE
-    orderNumber = 100;
-SELECT 
-    *
-FROM
-    dup_orders
-ORDER BY orderNumber ASC;
-
-
--- Rollback changes it back to the last commit.
-ROLLBACK;
-SELECT 
-    *
-FROM
-    dup_orders;
-
-
-
-COMMIT;-- Changes are saved and this transaction can not be undone.
-
-UPDATE dup_orders 
-SET 
-    orderDate = '9999-01-01'
-WHERE
-    orderNumber = 10100;
-    
-ROLLBACK; --  change it back to the last commit.
