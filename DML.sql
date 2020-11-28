@@ -2,7 +2,7 @@
 -- SQL tutorial
 -- by Mohammad Daneshvar
 
--- Chapter 1: Data Manipulation Language
+-- Chapter 2: Data Manipulation Language
 --------------------------------------------------------------
 use database data;
 
