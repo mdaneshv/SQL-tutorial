@@ -4,7 +4,7 @@
 
 -- Chapter 1: Data Definition Language
 --------------------------------------------------------------
-Create Database data
+CREATE Database data
 
 DROP TABLE IF EXISTS orders;
 CREATE TABLE orders (
