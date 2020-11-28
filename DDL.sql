@@ -110,3 +110,4 @@ insert  into `offices`(`officeCode`,`city`,`phone`,`addressLine1`,`addressLine2`
 ('6','Sydney','+61 2 9264 2451','5-11 Wentworth Avenue','Floor #2',NULL,'Australia','NSW 2010','APAC'),
 
 ('7','London','+44 20 7877 2041','25 Old Broad Street','Level 7',NULL,'UK','EC2N 1HN','EMEA');
+
