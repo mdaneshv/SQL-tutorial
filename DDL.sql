@@ -1,17 +1,23 @@
--- Create and Drop 
+--------------------------------------------------------------
+-- SQL tutorial
+-- by Mohammad Daneshvar
+
+-- Chapter 1: Data Definition Language
+--------------------------------------------------------------
+Create Database data
+
 DROP TABLE IF EXISTS orders;
 CREATE TABLE orders (
-    `ID` INT NOT NULL,
+    `id` INT NOT NULL,
     `orderNumber` INT NOT NULL,
     `orderDate` DATE NULL,
-    `requiredDate` DATE NULL,
     `shippedDate` DATE DEFAULT NULL,
     `status` VARCHAR(15) NULL,
     `comments` TEXT,
     `customerNumber` INT NOT NULL,
     `customerName` VARCHAR(30) NOT NULL,
     `customerLocation` VARCHAR(30) NULL,
-    `primary key` (employees_name)
+    `primary key` (id)
 );
 
 
@@ -25,8 +31,14 @@ ALTER TABLE orders
 DROP PRIMARY KEY;
 
 
+-- Alter: change the data type
 ALTER TABLE orders
 CHANGE customerName customerName char(128) NOT NULL;
+
+
+-- Alter: add a new column
+ALTER TABLE orders
+ADD CustomerPhone varchar(255) Null;
 
 
 -- Rename 
@@ -46,7 +58,7 @@ DROP TABLE order_details;
 
 CREATE DATABASE 
 
-USE `classicmodels`;
+USE `data`;
 
 DROP TABLE IF EXISTS `employees`;
 
