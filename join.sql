@@ -19,6 +19,20 @@ FROM
 ORDER BY orderNumber;
 
 
+
+-- inner join
+SELECT 
+    e.emp_no, e.hire_date
+FROM
+    dept_manager d
+        JOIN
+    employees e ON e.emp_no = d.emp_no
+WHERE
+    hire_date BETWEEN '1990-01-01' AND '1995-01-01'
+ORDER BY emp_no;
+
+
+
 -- left join 
 SELECT 
     t2.customerNumber, t1.customerName, SUM(amount) AS summation
@@ -108,3 +122,4 @@ FROM
     WHERE
         e.emp_no = 110022
     GROUP BY emp_no) AS D;
+
