@@ -4,9 +4,7 @@
 
 -- Chapter 4: Transaction Control Language
 --------------------------------------------------------------
-
- 
- use data;
+use data;
 
 -- Commit: a transaction control language used to save the changes permanently.
 -- Should be used specially before delete, insert or update statements
