@@ -116,4 +116,4 @@ insert  into `offices`(`officeCode`,`city`,`phone`,`addressLine1`,`state`,`count
 
 ('4','Paris','+444 444 4444','43 Rue Jouffroy D\'abbans',NULL,'France','75017','EMEA'),
 
-('5','Tokyo','+555 555 5555','4-1 Kioicho','Chiyoda-Ku','Japan','102-8578','Japan'),
+('5','Tokyo','+555 555 5555','4-1 Kioicho','Chiyoda-Ku','Japan','102-8578','Japan');
