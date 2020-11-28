@@ -1,5 +1,11 @@
+ --------------------------------------------------------------
+-- SQL tutorial
+-- by Mohammad Daneshvar
+
+-- Chapter 4: join clause and union
+--------------------------------------------------------------
 -- use database
-use database classicmodels;
+use data;
 
 
 -- select tables
@@ -11,7 +17,7 @@ SELECT * FROM payments;
 
 -- inner join 
 SELECT 
-    t1.orderNumber, t2.orderDate, t1.quantityOrdered
+    t1.orderNumber, t2.orderDate
 FROM
     orderdetails t1
         INNER JOIN
@@ -24,11 +30,11 @@ ORDER BY orderNumber;
 SELECT 
     e.emp_no, e.hire_date
 FROM
-    dept_manager d
+    dept_name d
         JOIN
     employees e ON e.emp_no = d.emp_no
 WHERE
-    hire_date BETWEEN '1990-01-01' AND '1995-01-01'
+    hire_date BETWEEN '2019-01-01' AND '2020-01-01'
 ORDER BY emp_no;
 
 
@@ -57,7 +63,7 @@ FROM
             (SELECT 
                     emp_no
                 FROM
-                    dept_manager
+                    dept_name
                 WHERE
                     emp_no = 110022)
     FROM
@@ -76,7 +82,7 @@ FROM
             (SELECT 
                     emp_no
                 FROM
-                    dept_manager
+                    dept_name
                 WHERE
                     emp_no = 110039)
     FROM
@@ -95,7 +101,7 @@ FROM
             (SELECT 
                     emp_no
                 FROM
-                    dept_manager
+                    dept_name
                 WHERE
                     emp_no = 110022)
     FROM
@@ -113,7 +119,7 @@ FROM
             (SELECT 
                     emp_no
                 FROM
-                    dept_manager
+                    dept_name
                 WHERE
                     emp_no = 110039)
     FROM
