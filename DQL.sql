@@ -1,12 +1,19 @@
+--------------------------------------------------------------
+-- SQL tutorial
+-- by Mohammad Daneshvar
+
+-- Chapter 3: Data Query Language
+--------------------------------------------------------------
+
 -- use database
-Use classicmodels;
+Use data;
    
    
---  Select all data in a ascending order of ordernumbers
+--  Select all data in orders table in a ascending order of ordernumbers
 SELECT 
     *
 FROM
-    dup_orders
+    orders
 ORDER BY orderNumber ASC;
 
 
@@ -72,11 +79,11 @@ WHERE
 SELECT 
     *
 FROM
-    dept_manager
+    dept_name
 WHERE
     emp_no IN (SELECT 
             emp_no
         FROM
             employees
         WHERE
-            hire_date BETWEEN '1990-01-01' AND '1995-01-01');
+            hire_date BETWEEN '2019-01-01' AND '2020-01-01');
