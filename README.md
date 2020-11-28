@@ -1,2 +1,2 @@
 # SQL-tutorial
-SQL commands to create and manipulate tables and extract data from them
+SQL commands for creating and manipulating tables and extracting data from them.
