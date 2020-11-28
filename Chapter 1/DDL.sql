@@ -81,15 +81,15 @@ CREATE TABLE `employees` (
 
 insert  into `employees`(`employeeNumber`,`lastName`,`firstName`,`extension`,`email`,`officeCode`,`reportsTo`,`jobTitle`) values 
 
-(1002,'Murphy','Diane','x5800','dmurphy@classicmodelcars.com','1',NULL,'President'),
+(1002,'Danesh','Moh','x5800','daneshmoh@company.com','1',NULL,'President'),
 
-(1056,'Patterson','Mary','x4611','mpatterso@classicmodelcars.com','1',1002,'VP Sales'),
+(1056,'Johnson','Eric','x4611','jeric@company.com','1',1002,'VP Sales'),
 
-(1076,'Firrelli','Jeff','x9273','jfirrelli@classicmodelcars.com','1',1002,'VP Marketing'),
+(1076,'Lopez,'Mike','x9273','lomike@company.com','1',1002,'VP Marketing'),
 
-(1088,'Patterson','William','x4871','wpatterson@classicmodelcars.com','6',1056,'Sales Manager (APAC)'),
+(1088,'Grant','Alan','x4871','grantal@company.com','6',1056,'Sales Manager (APAC)'),
 
-(1102,'Bondur','Gerard','x5408','gbondur@classicmodelcars.com','4',1056,'Sale Manager (EMEA)'),
+(1102,'Malcolm','Ian','x5408','malian@company.com','4',1056,'Sale Manager (EMEA)'),
 
 
 DROP TABLE IF EXISTS `offices`;
