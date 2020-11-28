@@ -1,34 +1,40 @@
+--------------------------------------------------------------
+-- SQL tutorial
+-- by Mohammad Daneshvar
 
-use database classicmodel;
+-- Chapter 1: Data Manipulation Language
+--------------------------------------------------------------
+use database data;
 
 -- Insert into a table from another table
-INSERT INTO dup_orders
-  SELECT * FROM classicmodels.orders;
+INSERT INTO orders
+  SELECT * FROM data.order_details;
   
   
 -- Insert manually
-INSERT INTO dup_orders (orderNumber, orderDate)
-  VALUES (100, '3000-01-01'),
-  (300 ,'9000-01-01');
+INSERT INTO orders (orderNumber, orderDate)
+  VALUES (1, '2020-01-01'),
+  (2 ,'2020-01-02'),
+  (3 ,'2020-01-03');
   
   
 -- Insert into the table from a csv or txt file. Use FIRSTROW=2 to skip the column headers.
-LOAD DATA INFILE 'C:\customers.csv'
-INTO TABLE dup_orders
+LOAD DATA INFILE 'C:\orders.csv'
+INTO TABLE orders
 FIELDS TERMINATED BY ',';  
   
 
 -- Delete statement: it deletes records from the table based on the condition
-DELETE FROM dup_orders 
+DELETE FROM orders 
 WHERE
-    orderNumber = 100;
+    orderNumber = 1;
 
 
 -- Update table
-UPDATE dup_orders 
+UPDATE orders 
 SET 
     orderDate = '9999-01-01'
 WHERE
-    orderNumber = 10100;
+    orderNumber = 2;
     
 
