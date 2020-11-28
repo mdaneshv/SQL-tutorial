@@ -85,7 +85,7 @@ insert  into `employees`(`employeeNumber`,`lastName`,`firstName`,`extension`,`em
 
 (1056,'Johnson','Eric','x4611','jeric@company.com','1',1002,'VP Sales'),
 
-(1076,'Lopez,'Mike','x9273','lomike@company.com','1',1002,'VP Marketing'),
+(1076,'Lopez','Mike','x9273','lomike@company.com','1',1002,'VP Marketing'),
 
 (1088,'Grant','Alan','x4871','grantal@company.com','6',1056,'Sales Manager (APAC)'),
 
